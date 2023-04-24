@@ -4,13 +4,13 @@ import css from './FriendListItem.module.css';
 export const FriendListItem = function(props) {
     const { avatar, name, isOnline } = props;
     return (
-        <>
+        <li className={css.item}>
             {isOnline ? 
             <span className={css.status} data="onLine"></span> : 
             <span className={css.status} data="offLine"></span>}
             <img className={css.avatar} src={avatar} alt={`${name} avatar`} width="48" />
             <p className={css.name}>{name}</p>
-        </>
+        </li>
     )
 }
 

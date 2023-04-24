@@ -1,31 +1,28 @@
-// import PropTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import css from './FriendList.module.css';
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 
 
 export const FriendList = function (props) {
-    const { friends } =props
+    const { friends } = props;
     return (
         <ul className={css.friendlist}>
             {friends.map(({ name, avatar, isOnline, id }) => {
                 return (
-                    <li key={id} className={css.item}>
+                    <React.Fragment key={id}>
                         <FriendListItem
                             avatar={avatar}
                             name={name}
                             isOnline={isOnline}
                         />
-
-                    </li>
+                    </React.Fragment>
                 )
             })}
         </ul>
     )
 }
 
-// FriendList.propTypes.shape({
-//         avatar: PropTypes.string,
-//         name: PropTypes.string.isRequired,
-//         isOnline: PropTypes.bool.isRequired,
-//         id: PropTypes.number.isRequired,
-//       })
+FriendList.propTypes = {
+    friends: PropTypes.arrayOf(PropTypes.object).isRequired
+};

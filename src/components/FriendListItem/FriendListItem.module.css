@@ -1,3 +1,14 @@
+.item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 8px 16px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px solid orange;
+    background-color: white;
+}
+
 .status {
     display: block;
     width: 26px;
