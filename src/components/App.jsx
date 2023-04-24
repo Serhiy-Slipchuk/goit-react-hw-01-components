@@ -1,7 +1,9 @@
 import user from '../myDB/user.json';
 import data from '../myDB/data.json';
+import friends from '../myDB/friends.json';
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
+import { FriendList } from './FriendList/FriendList';
 
 export const App = () => {
   return (
@@ -30,6 +32,9 @@ export const App = () => {
         title="upload stats"
 
       ></Statistics>
+
+      <FriendList
+        friends={friends}/>
     </div>
   );
 };
