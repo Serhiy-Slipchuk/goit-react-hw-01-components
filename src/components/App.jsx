@@ -16,6 +16,7 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         paddingTop: '20px',
+        paddingBottom: '30px',
         fontSize: 40,
         color: '#010101'
       }}

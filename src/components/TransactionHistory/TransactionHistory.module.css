@@ -18,6 +18,10 @@
     border-bottom: 0;
 }
 
+.transactionHistory tr:last-child {
+    border-bottom: 1px solid orange;
+}
+
 .transactionHistory tbody tr:nth-child(2n) {
     background-color: lightgray;
 }
