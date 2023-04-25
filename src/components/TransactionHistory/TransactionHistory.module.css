@@ -1,16 +1,16 @@
-.transactionHistory {
+.transaction-history {
     font-size: 20px;
     width: 450px;
     text-align: center;
     border-collapse: collapse;
 }
 
-.transactionHistory thead {
+.transaction-history thead {
     font-weight: 700;
     background-color: orange;
 }
 
-.transactionHistory td {
+.transaction-history td {
     width: 150px;
     padding: 5px;
     border: 1px solid orange;
@@ -18,10 +18,20 @@
     border-bottom: 0;
 }
 
-.transactionHistory tr:last-child {
+.transaction-history tbody tr:nth-child(2n+1):hover {
+    color: white;
+    background-color: orange;
+}
+
+.transaction-history tbody tr:nth-child(2n):hover {
+    color: white;
+    background-color: orange;
+}
+
+.transaction-history tbody tr:last-child {
     border-bottom: 1px solid orange;
 }
 
-.transactionHistory tbody tr:nth-child(2n) {
+.transaction-history tbody tr:nth-child(2n) {
     background-color: lightgray;
 }
