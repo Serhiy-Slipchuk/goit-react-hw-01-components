@@ -1,13 +1,10 @@
 import PropTypes from 'prop-types';
 import css from './FriendListItem.module.css';
 
-export const FriendListItem = function(props) {
-    const { avatar, name, isOnline } = props;
+export const FriendListItem = function({ avatar, name, isOnline }) {
     return (
         <li className={css.item}>
-            {isOnline ? 
-            <span className={css.status} data="onLine"></span> : 
-            <span className={css.status} data="offLine"></span>}
+            <span className={`${css.status} ${isOnline ? css.onLine : css.offLine}`}></span>
             <img className={css.avatar} src={avatar} alt={`${name} avatar`} width="48" />
             <p className={css.name}>{name}</p>
         </li>
@@ -15,7 +12,7 @@ export const FriendListItem = function(props) {
 }
 
 FriendListItem.propTypes = {
-    avatar: PropTypes.string,
+    avatar: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    isOnline: PropTypes.bool.isRequired,
+    isOnline: PropTypes.bool.isRequired
 }

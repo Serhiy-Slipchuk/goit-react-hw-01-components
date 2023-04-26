@@ -33,10 +33,10 @@
     font-weight: 700;
 }
 
-[data = "offLine"] {
+.offLine {
     background-color: red;
 }
 
-[data = "onLine"] {
+.onLine {
     background-color: green;
 }
